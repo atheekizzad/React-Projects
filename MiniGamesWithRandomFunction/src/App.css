@@ -1,0 +1,77 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;                  /* fill remaining vertical space */
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  padding: 20px;
+  background-color: #121212; /* optional: dark bg for game area */
+}
+
+
+/* Navigation Bar */
+.nav-bar {
+  background-color: #77053c;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 10px 15px;
+  font-size: 16px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.nav-link:active {
+  transform: scale(0.95);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Content Area */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .nav-link {
+    font-size: 14px;
+    margin: 8px;
+    padding: 8px 12px;
+  }
+
+  .nav-bar {
+    padding: 10px;
+  }
+}

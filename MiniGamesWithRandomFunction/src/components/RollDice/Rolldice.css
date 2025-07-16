@@ -1,0 +1,111 @@
+/* Rolldice.css */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+.RollDice p {
+  font-size: 2rem;              /* bigger font */
+  margin: 1rem 0;
+  font-weight: 700;
+  color: #00e5ff;               /* bright cyan/neon */
+  text-shadow:
+    0 0 5px #00e5ff,
+    0 0 10px #00e5ff,
+    0 0 20px #00e5ff,
+    0 0 40px #00e5ff;
+}
+.RollDice p.score {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #00ff99; /* neon green */
+  text-shadow:
+    0 0 10px #00ff99,
+    0 0 20px #00ff99,
+    0 0 30px #00ff99;
+}
+
+.RollDice p.tries {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff0066; /* neon pink */
+  text-shadow:
+    0 0 8px #ff0066,
+    0 0 16px #ff0066,
+    0 0 24px #ff0066;
+}
+
+.RollDice {
+  background: #2e0464; /* light background */
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 0 35px #1f03d9aa;
+  
+  /* Make RollDice fill entire viewport */
+  width: 100vw;
+  height: 100vh;
+
+  /* Center content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.RollDice-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.RollDice p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.RollDice button {
+  cursor: pointer;
+  background-color: #4a90e2;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RollDice button:hover:not(:disabled) {
+  background-color: #357abd;
+  box-shadow: 0 6px 15px rgba(53, 122, 189, 0.6);
+}
+
+.RollDice button:disabled {
+  cursor: not-allowed;
+  background-color: #a0aec0;
+  box-shadow: none;
+}
+
+.RollDice button.rolling {
+  background-color: #d9534f;
+  box-shadow: 0 6px 15px rgba(217, 83, 79, 0.6);
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 6px 15px rgba(217, 83, 79, 0.6);
+  }
+  100% {
+    box-shadow: 0 12px 30px rgba(217, 83, 79, 0.9);
+  }
+}

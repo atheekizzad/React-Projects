@@ -1,0 +1,153 @@
+/* Numberhub.css - Gaming Mode with Vertical Input & Buttons */
+
+.number-hub {
+  width: 100%;
+  max-width: 960px;
+  /* Remove margin auto because main centers it */
+  padding: 40px 35px;
+  background: #121212;
+  border-radius: 20px;
+  box-shadow: 0 0 35px #00ffccaa;
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #00ffcc;
+  text-align: center;
+  user-select: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh; /* at least 70% viewport height */
+  gap: 20px;
+}
+
+.number-hub label {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #00e6c3;
+}
+
+/* Input styling */
+.number-hub input[type="number"] {
+  display: block;
+  width: 60%;
+  max-width: 350px;
+  margin: 15px auto;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 2px solid #00e6c3;
+  background: #1e1e1e;
+  color: #00ffcc;
+  outline: none;
+  transition: border-color 0.3s ease;
+  text-align: center;
+}
+
+.number-hub input[type="number"]:focus {
+  border-color: #00ffd2;
+  box-shadow: 0 0 8px #00ffd2;
+}
+
+/* Buttons styling */
+.number-hub button {
+  display: block;
+  width: 60%;
+  max-width: 350px;
+  margin: 15px auto;
+  background: linear-gradient(90deg, #00ffc8, #00cc9a);
+  border: none;
+  border-radius: 14px;
+  color: #121212;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 0 12px #00ffccaa;
+  user-select: none;
+}
+
+.number-hub button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #00e6b8, #00a678);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffccff;
+}
+
+.number-hub button:disabled {
+  background: #004d3d;
+  cursor: not-allowed;
+  box-shadow: none;
+  color: #666;
+}
+
+/* Results text */
+.number-hub .result-message,
+.number-hub > *:nth-child(5) { /* your results text selector */
+  font-size: 18px;
+  font-weight: 700;
+  margin: 20px 0 15px 0;
+  min-height: 28px;
+  color: #00ffcc;
+  text-shadow: 0 0 4px #00ffccaa;
+}
+
+/* Score display */
+.number-hub .score {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #00ffcc;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  text-shadow: 0 0 5px #00ffcccc;
+}
+
+.number-hub .score span {
+  background: #002522;
+  padding: 8px 18px;
+  border-radius: 12px;
+  user-select: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .number-hub {
+    max-width: 95vw;
+    padding: 30px 25px;
+  }
+
+  .number-hub input[type="number"] {
+    width: 80%;
+    max-width: none;
+    font-size: 18px;
+  }
+
+  .number-hub button {
+    width: 80%;
+    max-width: none;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .number-hub {
+    padding: 25px 20px;
+  }
+
+  .number-hub button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .number-hub label,
+  .number-hub input[type="number"] {
+    font-size: 16px;
+  }
+}

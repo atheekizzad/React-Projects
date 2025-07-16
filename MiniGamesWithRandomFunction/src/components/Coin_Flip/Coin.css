@@ -1,0 +1,30 @@
+/* Coin Container */
+.coin-container {
+  width: 200px;
+  height: 200px;
+  perspective: 1200px;
+}
+
+/* Coin Image Styling */
+.coin {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 1s ease-in-out;
+  background: #fff;
+}
+
+/* Toss Animation */
+.rotate-now {
+  animation: toss-spin 1s linear infinite;
+}
+
+@keyframes toss-spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(1440deg); /* 4 Full Spins */
+  }
+}

@@ -1,0 +1,83 @@
+/* Die.css */
+
+/* Dice base style - white cube with subtle shading */
+.Die {
+  font-size: 6em;
+  padding: 0.25em;
+  color: #222222; /* Dark dice dots */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.6em;
+  height: 1.6em;
+  user-select: none;
+  cursor: default;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #ffffff, #d9d9d9); /* white dice face */
+  box-shadow:
+    5px 5px 10px #bebebe,
+    -5px -5px 10px #ffffff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect: subtle glow and scale */
+.Die:hover {
+  box-shadow:
+    5px 5px 15px #a8a8a8,
+    -5px -5px 15px #ffffff;
+  transform: scale(1.05);
+}
+
+/* Rotating shaking animation class */
+.Die-shaking {
+  animation: rotate-shake 0.8s ease-in-out 1;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Rotate + shake keyframes */
+@keyframes rotate-shake {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  10% {
+    transform: rotate(20deg) translate(-10px, 5px);
+  }
+  20% {
+    transform: rotate(-20deg) translate(10px, -5px);
+  }
+  30% {
+    transform: rotate(15deg) translate(-8px, 4px);
+  }
+  40% {
+    transform: rotate(-15deg) translate(8px, -4px);
+  }
+  50% {
+    transform: rotate(10deg) translate(-5px, 2px);
+  }
+  60% {
+    transform: rotate(-10deg) translate(5px, -2px);
+  }
+  70% {
+    transform: rotate(5deg) translate(-3px, 1px);
+  }
+  80% {
+    transform: rotate(-5deg) translate(3px, -1px);
+  }
+  90% {
+    transform: rotate(2deg) translate(-1px, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .Die {
+    font-size: 4em;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 12px;
+  }
+}
