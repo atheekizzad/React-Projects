@@ -1,0 +1,183 @@
+/* ToDo.css - Minimal, clean, no heavy boxes */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  color: #222;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  max-width: none;  /* or increase max-width */
+  width: 50vw;      /* allow it to grow up to 90% viewport width */
+  margin: 0 auto;
+}
+
+label {
+  font-weight: 1000;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  display: block;
+  color: #810639;
+
+  text-align: center; /* centers the text horizontally */
+  width: 100%; 
+ 
+}
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #2f0681;
+  text-align: center;
+  margin: 40px 0 50px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px rgba(129, 6, 57, 0.3);
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}.button-container button.mark-toggle {
+  width: 130px; /* fixed width */
+  text-align: center;
+}
+
+h1 .icon {
+  font-size: 3.5rem;
+  animation: bounce 2s infinite ease-in-out;
+  user-select: none;
+  color: #a72b60;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+input[type="text"],
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+button {
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #160253;
+  color: rgb(255, 255, 255);
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #700327;
+}
+
+h2 {
+  color: #e74c3c;
+  height: 24px; /* reserve vertical space */
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+li {
+  padding: 12px 8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-container {
+  font-size: 1.8rem;
+  font-weight:bolder;
+  color: #222;
+  word-break: break-word;
+  margin-bottom: 6px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+  font-style: italic;
+}
+
+small {
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: bolder;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start; /* keep buttons aligned left */
+}
+
+.button-container button {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  min-width: 90px;   /* minimum width */
+  max-width: 120px;  /* maximum width */
+  white-space: nowrap; /* prevent text wrap */
+  flex: 0 0 auto;    /* don't grow or shrink */
+}
+
+.button-container button:first-child {
+  background-color: #e74c3c; /* delete red */
+}
+
+.button-container button:first-child:hover {
+  background-color: #c0392b;
+}
+
+.button-container button:nth-child(2) {
+  background-color: #f0ad4e; /* edit orange */
+  color: #222;
+}
+
+.button-container button:nth-child(2):hover {
+  background-color: #d69822;
+}
+
+.button-container button:last-child {
+  background-color: #28a745; /* done green */
+}
+
+.button-container button:last-child:hover {
+  background-color: #1e7e34;
+}
