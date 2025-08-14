@@ -1,0 +1,50 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set the layout for the whole page */
+  .App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Split-screen container */
+  .split-screen {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Style for the left panel */
+  .left-panel {
+    width: 50%;  /* Set left panel to take half of the screen */
+    padding: 20px;
+    overflow-y: auto;  /* Allow scrolling if content exceeds screen */
+    background-color: #f0f0f0;  /* Light background color */
+  }
+  
+  /* Style for the right panel */
+  .right-panel {
+    width: 50%;  /* Set right panel to take the other half of the screen */
+    padding: 20px;
+    overflow-y: auto;  /* Allow scrolling if content exceeds screen */
+    background-color: #ffffff;  /* White background color */
+  }
+  
+  /* Optional: Add some responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .split-screen {
+      flex-direction: column;
+    }
+  
+    .left-panel, .right-panel {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  

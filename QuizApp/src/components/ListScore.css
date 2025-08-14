@@ -1,0 +1,77 @@
+/* Highscore list as cards */
+.highscore-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.highscore-container li {
+  display: flex;
+  justify-content: space-between; /* username left, score right */
+  align-items: center;
+ 
+  font-size: 1.3rem; /* larger, more readable */
+  background: #e6e9ec;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(179, 172, 172, 0.05);
+  font-weight: 500;
+  color: #000000;
+  transition: all 0.2s ease;
+  width: 500px;
+  padding: 30px;
+}
+
+.highscore-container li:hover {
+  background: #d0f0f9;
+}
+
+/* Username and score styles */
+.highscore-container li span:first-child {
+  font-weight: 600; /* make username bolder */
+  color: #000101;
+  margin-left: 40px;
+}
+
+.highscore-container li span:last-child {
+  font-weight: 700; /* score bold */
+  color: #ff9800;
+  font-size: 1.4rem; /* slightly bigger */
+    margin-right: 40px;
+letter-spacing: 2px;
+}
+/* Heading */
+.highscore-container h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #00796b; /* teal color */
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Button Styling */
+.highscore-container button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 12px;
+  background: #00bcd4;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 270px;
+  text-align: center;
+  margin-left: 110px;
+}
+
+.highscore-container button:hover {
+  background: #0097a7;
+}
