@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import PasswordValidator from "./Components/PasswordValidator";
-import PasswordValidatorwithRegex from "./Components/PasswordValidatorwithRegex";
+import PasswordValidator from "./Components/PasswordValidator/PasswordValidator";
+import PasswordValidatorwithRegex from "./Components/PasswordValidator/PasswordValidatorwithRegex";
+import CreditCardNumberValidator from "./Components/CardNumberValidator/CreditCardNumberValidator";
+import OtherValidator from "./Components/OtherValidators/OtherValidator";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <div className="grid-container">
         <PasswordValidator />
         <PasswordValidatorwithRegex />
+        <CreditCardNumberValidator />
+        <OtherValidator />
       </div>
     </div>
   );
