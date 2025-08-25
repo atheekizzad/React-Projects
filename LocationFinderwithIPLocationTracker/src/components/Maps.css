@@ -1,121 +1,220 @@
 /* Maps.css */
 
-.main {
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.maps-app {
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  background: #150352;
+  padding: 1.5rem;
   min-height: 100vh;
-  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #f8fafc, #e0f2fe);
+  color: #1e293b;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #ffffff;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+/* Flex container for map and info side by side */
+.maps-main {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap; /* makes it responsive on smaller screens */
 }
-.info-section {
+
+
+/* Header */
+.maps-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 20px;
+}
+
+.maps-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.maps-header p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* Controls */
+.maps-controls {
+
+  width: 1750px;
+  height: 700px;
+  background: #fffefe;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  flex: 1;
+  gap: 1.2rem;
+  
+
 }
 
-.map-container {
-  flex: 1;
-  width: 50%;
-  max-width: 600px;
-  height: 400px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.location-section {
+/* Search bar */
+.maps-search {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  gap: 0.8rem;
   width: 100%;
-  max-width: 1200px;
-  margin-top: 20px;
-  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.maps-input {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  transition: border 0.2s;
+  max-width: 300px;
+}
+
+.maps-input:focus {
+  outline: none;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2);
+}
+
+.maps-btn {
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.1s;
+  font-size: 1rem;
+}
+
+.maps-btn:active {
+  transform: scale(0.97);
+}
+
+.maps-btn-search {
+  background: #03a7ff;
+  color: #fff;
+}
+
+.maps-btn-search:hover {
+  background: #0369a1;
+}
+
+/* Map container */
+.map-container {
+  flex: 2; /* takes more space */
+  width: 500px;
+  height: 500px;
+  border-radius: 30px;
+  overflow: hidden;
+
+}
+
+/* Info section */
+.info-section {
+  flex: 1; /* smaller than map */
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .location-info {
-  flex: 0;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  color: #555;
-  text-align: center;
-}
-
-.button-primary {
-  margin-top: 10px;
-  margin-left: 160px;
-  padding: 20px;
-  background-color: #ff006f;
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  width: fit-content;
-  
-}
-
-.button-primary:hover {
-  background-color: #0056b3;
+  background: #f1f5f9;
+  padding:30px;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+  justify-content: center;
+     margin: 0 auto;       /* centers the box itself */
+  text-align: center;   /* centers the text inside */
+  max-width: 500px;  
+      display: grid; /* Change from flex to grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+   line-height: 1.8; 
+   font-size: 16px;
 }
 
 .ip-details {
-  width: 100%;
-  max-width: 600px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
-  padding: 20px;
-  text-align: center;
-  font-size: 15px;
-  color: #444;
+
+  background: #f9fafb;
+  border-left: 4px solid #0284c7;
+  padding: 0.9rem 1.1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #334155;
+  max-width: 400px;    /* limits the width */
+  width: 100%;          /* takes full width up to max-width */
+  box-sizing: border-box; /* includes padding inside width */
+  margin: 0 auto;       /* centers the card */
+
+
 }
 
 .ip-details h4 {
-  margin: 10px 0 5px 0;
-  font-size: 16px;
-  font-weight: bold;
+  margin-top: 0.3rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
 }
 
-.ip-details p {
-  margin: 5px 0;
+.button-secondary {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.1s;
+  max-width: 300px;
+    justify-content: center;
+     margin: 0 auto;       /* centers the box itself */
+  text-align: center;   /* centers the text inside */
+  max-width: 500px; 
+}
+.new.add {
+  text-align: center;   /* center button and text horizontally */
+  margin-top: 1rem;     /* optional spacing from above content */
+}
+.button-primary {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.1s;
+  max-width: 250px;
+  text-align: center;
+    display: inline-block; /* ensures button behaves like a block for centering */
+  margin-bottom: 1.5rem; /* space between button and IP info */
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-  .main {
-    padding: 40px;
-  }
-
-  .location-section {
-    flex-direction: row;
-  }
+.button-primary {
+  background: #0ea5e9;
+  color: #fff;
 }
 
-@media (max-width: 767px) {
-  .location-section {
-    flex-direction: column;
-  }
+.button-primary:hover {
+  background: #0284c7;
+}
 
-  .map-container,
-  .location-info {
-    width: 100%;
-  }
+.button-secondary {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.button-secondary:hover {
+  background: #e2e8f0;
 }
