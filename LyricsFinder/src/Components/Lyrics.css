@@ -1,0 +1,184 @@
+/* Reset default margins & paddings */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* prevents horizontal scroll */
+  background-color: #764ba2;
+}
+
+/* Fullscreen container */
+.container {
+  margin: 0;          /* remove extra margin */
+  padding: 2rem;      /* optional padding inside */
+  max-width: 100%;      /* full viewport width */
+  height: 100vh;      /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow: #667eea;
+}
+
+/* Title styling */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Input row styling */
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+/* Input groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input-field {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #aeacb6;
+  
+}
+
+.input-field:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Search button */
+.search-btn {
+  padding: 0.8rem 2rem;
+  background-color: #ff7e5f;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.search-btn:hover {
+  background-color: #ed7708;
+}
+
+.search-btn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Content wrapper for suggestions & preview */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+/* Suggestions container */
+.suggestions-container {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 0.5rem;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  min-height: 220px; /* keep permanent height */
+}
+
+/* Preview container */
+.preview-container {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px; /* permanent height */
+}
+/* Lyrics container */
+.lyrics-container {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1rem;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  white-space: pre-wrap;
+}
+
+/* Loading and error messages */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+/* Lyrics text */
+.lyrics {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Scrollbar styling for modern look */
+.suggestions-container::-webkit-scrollbar,
+.lyrics-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions-container::-webkit-scrollbar-thumb,
+.lyrics-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .input-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .input-group {
+    width: 80%;
+  }
+  .preview-container,
+  .suggestions-container {
+    height: 200px;
+  }
+}

@@ -1,0 +1,53 @@
+/* Suggestions container styling */
+.sug {
+  width: 700px;
+  height: 400px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Unordered list styling */
+.sug ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual suggestion items */
+.sug li {
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+/* Hover effect for suggestions */
+.sug li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+/* Scrollbar styling */
+.sug::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sug::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .sug {
+    height: 200px; /* matches your preview container height on mobile */
+  }
+}

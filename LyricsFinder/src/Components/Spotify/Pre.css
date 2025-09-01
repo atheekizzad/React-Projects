@@ -1,0 +1,38 @@
+/* Preview container */
+.preview-container {
+  flex: 1;
+  border-radius: 15px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px; /* reserve permanent space */
+  transition: transform 0.2s ease;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.preview-container button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #1db954; /* Spotify green */
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  margin-bottom: 0.6rem;
+  margin-top: 2.1rem;
+}
+
+.preview-container button:hover:not(:disabled) {
+  background: #1ed760;
+  transform: translateY(-2px);
+}
+
+.preview-container button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
