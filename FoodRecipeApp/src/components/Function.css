@@ -1,0 +1,181 @@
+/* Container Styling */
+.function-container {
+  width: 100%;
+  min-height: 100vh;       /* ensures it covers at least full viewport height */
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  background-color: #717477;
+  box-sizing: border-box;  /* includes padding in height calculation */
+}
+
+
+/* Header Titles */
+.function-container h1
+ {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1c0552;
+  font-size: 2.1rem;
+}
+.function-container h3{
+   text-align: center;
+  margin-bottom: 1rem;
+  color: #1c0442;
+  font-size: 1.1rem;
+}
+
+/* Input Group */
+.input-grp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.input-grp input[type="text"] {
+  width: 300px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-grp input[type="text"]:focus {
+  border-color: #3498db;
+}
+
+.input-grp button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #190b73;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-grp button:hover {
+  background-color: #11079c;
+}
+
+/* Alert Message */
+.alert-message {
+  text-align: center;
+  color: #b8b3b3;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Recipe List */
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* exactly 2 cards per row */
+  gap: 2rem;
+  list-style: none;
+  padding-right: 90px;
+}
+
+/* Recipe Card */
+li {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover Effect */
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Titles */
+li h3, li h2 {
+  text-align: center;
+  margin: 0.25rem 0;
+}
+
+li h3 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+}
+
+li h2 {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Card Content: Image + Process */
+.card-content {
+  display: flex;          /* side-by-side layout */
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* Recipe Image */
+.card-content img {
+  width: 200px;           /* fixed width */
+  height: 180px;          /* fixed height */
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Process/Details Section */
+.card-content .process-details {
+  flex: 1;                /* takes remaining space */
+  max-height: 180px;      /* same as image height */
+  overflow-y: auto;       /* scroll if too long */
+  font-size: 0.9rem;
+  color: #34495e;
+  padding: 0.25rem;
+}
+
+/* Animations for React icon (slow spin) */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .input-grp {
+    flex-direction: column;
+  }
+
+  .input-grp input[type="text"] {
+    width: 100%;
+  }
+
+  .input-grp button {
+    width: 100%;
+  }
+
+  /* Stack card content vertically */
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-content .process-details {
+    max-height: none;
+    width: 100%;
+  }
+}
