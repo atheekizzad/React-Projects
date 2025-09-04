@@ -24,8 +24,3 @@ A simple **React application** to search for food recipes using the [Spoonacular
 - **CSS** – Styling
 
 ---
-
-## Screenshots
-
-![App Screenshot](screenshot.png)  
-_(Add a screenshot of your app here for better presentation)_
