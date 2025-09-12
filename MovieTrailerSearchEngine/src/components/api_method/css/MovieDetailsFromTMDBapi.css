@@ -1,0 +1,35 @@
+.details-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 100%;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  color: #ffd700;
+  font-family: 'Arial', sans-serif;
+}
+
+.movie-poster {
+  width: 200px; /* smaller than before */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  flex-shrink: 0;
+}
+
+.movie-overview {
+  flex: 1;
+  font-size: 1.3rem; /* smaller font */
+  line-height: 1.4;  /* tighter line spacing */
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+  overflow: visible; /* change from hidden */
+  display: block;    /* remove -webkit-box */
+  /* remove -webkit-line-clamp */
+  /* remove -webkit-box-orient */
+}

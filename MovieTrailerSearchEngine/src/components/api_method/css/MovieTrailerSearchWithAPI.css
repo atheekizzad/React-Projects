@@ -1,0 +1,129 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* stop horizontal scroll */
+    background: #121212;
+}
+.trailer-search-container {
+  width: 100%;               /* take full width */ 
+  margin: 40px auto;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #f5f5f5;
+  background: #121212;
+  padding: 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+min-height: 100vh;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  margin-left: 530px;
+  padding: 25px;
+}
+
+.search-bar input {
+ width: 30%;
+  padding: 22px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #2f2f2f;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.search-bar input:focus {
+  background: #3a3a3a;
+  box-shadow: 0 0 0 2px #ff3f6c;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #ff3f6c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: #ff1f4c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 63, 108, 0.5);
+}
+
+/* Alerts */
+.alert {
+  color: #ff6b6b;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Main Output */
+.main-output {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* responsive for small screens */
+  align-items:first baseline;
+  margin-right: 80px;
+}
+
+.iframe-section {
+  flex: 2;
+  min-width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.main-output > div {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Suggestions Grid */
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.suggestions iframe {
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.suggestions iframe:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Headings */
+h3 {
+  margin-top: 10px;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #ff3f6c;
+  display: inline-block;
+  padding-bottom: 26px;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-left: 550px;
+}
+
+h4 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #ddd;
+}

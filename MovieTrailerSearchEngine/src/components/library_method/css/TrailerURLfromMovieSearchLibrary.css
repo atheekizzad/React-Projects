@@ -1,0 +1,159 @@
+/* Whole container */
+.movie-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #121212;
+  color: #f5f5f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Heading */
+.movie-container h3 {
+   text-align: center;
+  font-size: 2.3rem;
+  color: #f76b07;
+  margin: 10px auto;  /* centers the element */
+  width: fit-content; /* so auto margin works nicely */
+  padding: 30px;
+}
+
+/* Search bar section */
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-section input {
+  flex: 1;
+  max-width: 400px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2c2c2c;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  padding: 20px;
+}
+
+.search-section input:focus {
+  background: #333;
+  box-shadow: 0 0 0 2px #ffcc00;
+}
+
+.search-section button {
+  padding: 10px 18px;
+  background: #ffcc00;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.search-section button:hover {
+  background: #ffd633;
+}
+
+/* Alerts */
+.alert-text {
+  margin-top: 10px;
+  color: #ff4d4d;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Search output (player + overview) */
+.search-ouput {
+  display: flex;
+  gap: 30px; /* small, compact */
+  width: 100%;
+  align-items: stretch; /* ✅ this ensures children stretch to full height */
+  padding: 30px;
+}
+
+/* Player section */
+.search-ouput .details-section {
+  display: flex;
+}
+/* Related movies heading */
+.movie-container h4 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ffd700; /* golden yellow to match theme */
+  margin: 20px 0 10px 0;
+  font-weight: bold;
+  text-transform: uppercase; /* optional: makes it stand out */
+  letter-spacing: 1px;       /* gives a subtle spacing for style */
+  display: inline-block;     /* to make border width fit text */
+  padding-bottom: 5px;
+}
+
+.search-ouput .react-player {
+   width: 100% !important;
+  height: 100% !important;
+    max-width: 100%; /* ensure it doesn't shrink */
+  min-height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+  /* ✅ kill the default padding from ReactPlayer */
+  position: relative !important;
+  padding-top: 0 !important;
+    box-sizing: border-box; /* include border/padding in width */
+
+}
+
+
+/* Overview section */
+.search-ouput .overview {
+    flex: 2;           /* equal width */
+ display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+}
+@media (min-width: 1400px) {
+  .search-ouput {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+/* Suggestions grid below */
+.sugchild {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 70px;
+}
+
+.player {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+ border: 3px solid #f5f5f5; /* width 3px, solid, color white-ish */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+  .search-ouput {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+
+  .search-ouput .overview {
+    max-height: none;
+  }
+
+  .search-ouput .react-player {
+    min-height: 250px;
+  }
+}

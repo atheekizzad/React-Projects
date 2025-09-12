@@ -1,0 +1,86 @@
+/* General App container */
+.App {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212; /* dark elegant background */
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation bar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 18px 25px;
+  background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+  border-bottom: 2px solid #f76b07; /* accent line */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Links in the navbar */
+nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+/* Hover effect */
+nav a:hover {
+  background: #f76b07;
+  color: #121212;
+  box-shadow: 0 3px 8px rgba(247, 107, 7, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Active route indicator (optional if you want a highlight for current page) */
+nav a.active {
+  background: #ffd633;
+  color: #121212;
+  box-shadow: 0 3px 8px rgba(255, 214, 51, 0.4);
+}
+
+/* Welcome message on home */
+.App h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 80px;
+  color: #ffd633;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive navbar */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
